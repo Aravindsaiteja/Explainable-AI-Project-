@@ -1,0 +1,114 @@
+Explainable AI for Heart Disease Prediction using SHAP and LIME
+Overview
+
+This project focuses on predicting heart disease using machine learning models enhanced with Explainable Artificial Intelligence (XAI) techniques. The primary goal is not only to achieve accurate predictions but also to make the model’s decisions transparent and interpretable. By applying SHAP and LIME, the system helps clinicians and users understand why a particular prediction is made, which is crucial for trust and adoption in healthcare applications.
+
+Project Structure
+explainable_ai_heart_disease/
+├── colabs/
+│   └── Jupyter notebooks for data preprocessing, exploratory data analysis,
+│      model training, evaluation, and XAI visualization
+├── data/
+│   └── Heart disease clinical dataset in CSV format
+├── models/
+│   └── Trained machine learning models saved in pickle (.pkl) format
+├── explainability/
+│   └── SHAP and LIME explanation outputs and visualizations
+├── deployment/
+│   └── Streamlit application files for model inference and explanation
+├── images/
+│   └── Plots, charts, and XAI visual assets used in reports and UI
+└── README.md
+
+Dataset
+Heart Disease Dataset
+
+The dataset consists of clinical and physiological attributes commonly used for heart disease diagnosis, such as:
+
+Age
+
+Sex
+
+Chest pain type
+
+Resting blood pressure
+
+Cholesterol level
+
+Fasting blood sugar
+
+Maximum heart rate achieved
+
+ECG results
+
+The dataset is preprocessed to handle missing values, normalize numerical features, and encode categorical variables.
+
+Machine Learning Techniques
+
+The following machine learning models were implemented and evaluated for heart disease prediction:
+
+Logistic Regression
+
+K-Nearest Neighbors (KNN)
+
+Support Vector Machine (SVM)
+
+Random Forest
+
+XGBoost
+
+Model performance was evaluated using accuracy, precision, recall, F1-score, and ROC-AUC. Hyperparameter tuning was performed using Grid Search with Cross-Validation to improve prediction accuracy and generalization.
+
+Explainable AI (XAI) Techniques
+
+To ensure interpretability and transparency of predictions, the following XAI methods were applied:
+
+LIME (Local Interpretable Model-Agnostic Explanations)
+
+Provides local explanations for individual predictions
+
+Highlights the most influential features for a specific patient
+
+Useful for case-by-case clinical decision support
+
+SHAP (SHapley Additive exPlanations)
+
+Provides global and local interpretability
+
+Identifies overall feature importance across the dataset
+
+Explains how each feature contributes positively or negatively to predictions
+
+These techniques make the black-box nature of machine learning models more understandable and trustworthy.
+
+Tools and Technologies
+
+Python
+
+Scikit-learn
+
+XGBoost
+
+Streamlit
+
+NumPy, Pandas
+
+Matplotlib, Seaborn
+
+SHAP, LIME
+
+Deployment
+
+The trained heart disease prediction model is deployed using Streamlit, providing:
+
+User-friendly input for patient data
+
+Real-time prediction results
+
+Visual explanations using SHAP and LIME
+
+This interactive interface enables users to both predict heart disease risk and understand the reasoning behind the prediction.
+
+Conclusion
+
+This project demonstrates how Explainable AI can enhance traditional machine learning models for healthcare applications. By integrating SHAP and LIME into heart disease prediction, the system delivers accurate results while ensuring interpretability and transparency. Such an approach supports informed clinical decisions, increases user trust, and aligns with ethical requirements in medical AI systems.
